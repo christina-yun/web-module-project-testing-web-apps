@@ -144,8 +144,9 @@ test('renders all firstName, lastName and email text when submitted. Does NOT re
     const emailDisplay = screen.getByTestId('emailDisplay');
     expect(emailDisplay).toBeInTheDocument();
 
-    // const message = screen.getByTestId('messageDisplay')
+    const message = screen.queryByTestId('messageDisplay')
 
+    expect(message).not.toBeInTheDocument();
     })
 });
 
