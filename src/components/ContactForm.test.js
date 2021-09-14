@@ -31,7 +31,7 @@ test('renders ONE error message if user enters less then 5 characters into first
 test('renders THREE error messages if user enters no values into any fields.', async () => {
     render(<ContactForm />)
     
-    const fnInput= screen.getByLabelText(/First Name*/i);
+    const fnInput= screen.getByText(/First Name*/i);
     userEvent.type(fnInput, '');
     
     const lnInput = screen.getByLabelText(/Last Name*/i);
